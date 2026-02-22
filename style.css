@@ -57,3 +57,10 @@ body {
 .upgrade-btn:hover {
   background: #333;
 }
+.upgrades span {
+  margin-left: 8px;
+  font-weight: bold;
+  color: #fff;
+  min-width: 60px;        /* ensures spans don’t shrink too much */
+  display: inline-block;   /* keeps them neatly next to buttons */
+}
