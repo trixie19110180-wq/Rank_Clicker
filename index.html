@@ -1,43 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Rank Clicker</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* --- Global Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
 
-  <div class="game-container">
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4b0082, #8a2be2);
+  color: #fff;
+}
 
-    <div class="leaderboard">
-      <h1>Rank Clicker</h1>
-      <div class="points-display">
-        Points: <span id="points">0</span>
-      </div>
-    </div>
+/* --- Container --- */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  width: 350px;
+  text-align: center;
+}
 
-    <div class="click-area">
-      <button id="clickButton" class="red-button">
-        CLICK
-      </button>
-    </div>
+/* --- Leaderboard --- */
+.leaderboard h1 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
 
-    <div class="upgrades">
-      <button id="upgradeClick" class="upgrade-btn">
-        Upgrade Click
-      </button>
-      <span id="upgradeViewDisplay">Upgrade: 1</span>
-      <button id="upgradeAutoClick" class="upgrade-btn">
-        Auto Clicker
-      </button>
-      <span id="autoClickDisplay">0/sec</span>
-      <button id="upgradePPS" class="upgrade-btn">
-        Points / Second
-      </button>
-      <span id="ppsDisplay">0/sec</span>
-    </div>
+.points-display {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
 
-  </div>
-<script src="script.js"></script>
-</body>
-</html>
+/* --- Click Area --- */
+.click-area {
+  margin-bottom: 30px;
+}
+
+.red-button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #ff4500; /* bright red */
+  color: #fff;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.red-button:hover {
+  background: #e03e00;
+  transform: scale(1.05);
+}
+
+.red-button:active {
+  transform: scale(0.95);
+}
+
+/* --- Upgrades --- */
+.upgrades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.upgrade-btn {
+  font-family: inherit;
+  font-size: 0.75rem;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #9400d3; /* purple */
+  color: #fff;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.upgrade-btn:hover {
+  background: #7a00b3;
+  transform: scale(1.05);
+}
+
+.upgrade-btn:active {
+  transform: scale(0.95);
+}
+
+/* --- Upgrade Display Text --- */
+.upgrades span {
+  margin-top: 5px;
+  font-size: 0.7rem;
+  display: block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 400px) {
+  .game-container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
