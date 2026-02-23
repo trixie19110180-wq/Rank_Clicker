@@ -11,6 +11,6 @@ clickButton.addEventListener("click", function() {
 })
 
 upgradeClick.addEventListener("click", function() {
-  upgradeAmt = Math.round(upgradeAmt * 1.2 * 100) / 100
-  upgradeViewDisplay.innerText = "Upgrade: " + upgradeAmt.toFixed(2)
+  upgradeAmt = Math.round(upgradeAmt * 1.2 * 100) / 100  // numeric rounding
+  upgradeViewDisplay.innerText = "Upgrade: " + upgradeAmt.toFixed(2) // display
 })
