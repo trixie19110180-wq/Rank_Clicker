@@ -13,5 +13,5 @@ clickButton.addEventListener("click", function() {
 upgradeClick.addEventListener("click", function() {
   upgradeAmt *= 1.2
   upgradeView = Math.ceil(upgradeAmt)
-  upgradeViewDisplay.innerText = "Upgrade:"+upgradeAmt
+  upgradeViewDisplay.innerText = "Upgrade:"+upgradeView
 })
